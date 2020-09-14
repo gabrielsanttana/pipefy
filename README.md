@@ -1,4 +1,4 @@
-## <div align="center"><img src="./.github/pipefy-logo.png" width="80"  /></div>
+## <div align="center"><img src="./.github/pipefy-logo.png" width="150"  /></div>
 
 ###
 
