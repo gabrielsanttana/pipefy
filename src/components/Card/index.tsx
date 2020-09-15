@@ -1,4 +1,5 @@
 import React from 'react';
+import {useDrag} from 'react-dnd';
 import {Container, Header, Label} from './styles';
 
 export interface CardProps {
@@ -9,6 +10,15 @@ export interface CardProps {
 }
 
 const Card: React.FC<CardProps> = ({labels, description, userAvatar}) => {
+  useDrag({
+    item: {
+      type: 'CARD',
+    },
+    collect: (monitor) => ({
+      isDragging: monitor.isDragging(),
+    }),
+  });
+
   return (
     <Container>
       <Header>

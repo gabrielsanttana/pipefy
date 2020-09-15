@@ -33,9 +33,14 @@ export const Title = styled.h3`
   padding: 0 10px;
 `;
 
-export const CardsCount = styled.span``;
+export const CardsCount = styled.span`
+  padding-top: 1px;
+`;
 
-export const RightComponent = styled.div``;
+export const RightComponent = styled.div`
+  display: flex;
+  align-items: center;
+`;
 
 export const AddButton = styled.button`
   width: 42px;
@@ -46,7 +51,12 @@ export const AddButton = styled.button`
   cursor: pointer;
 `;
 
-export const OptionsButton = styled.button``;
+export const OptionsButton = styled.button`
+  background-color: transparent;
+  border: 0;
+  margin-left: 5px;
+  cursor: pointer;
+`;
 
 export const CardList = styled.ul`
   margin-top: 30px;

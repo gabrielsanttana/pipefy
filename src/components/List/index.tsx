@@ -1,5 +1,6 @@
 import React from 'react';
 import {MdAdd} from 'react-icons/md';
+import {FaEllipsisV} from 'react-icons/fa';
 import Card, {CardProps} from '../Card';
 import {
   Container,
@@ -33,7 +34,9 @@ const List: React.FC<ListProps> = ({title, creatable, cards, done}) => {
           <AddButton>
             <MdAdd color="#fff" size={24} />
           </AddButton>
-          <OptionsButton>.</OptionsButton>
+          <OptionsButton>
+            <FaEllipsisV color="#999" size={14} />
+          </OptionsButton>
         </RightComponent>
       </Header>
 
