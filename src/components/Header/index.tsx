@@ -1,12 +1,12 @@
 import React from 'react';
 import {Container} from './styles';
 
-const Main: React.FC = () => {
+const Header: React.FC = () => {
   return (
     <Container>
-      <h1>Main</h1>
+      <h1>Pipefy</h1>
     </Container>
   );
 };
 
-export default Main;
+export default Header;
