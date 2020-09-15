@@ -7,14 +7,17 @@ interface BoardProps {
 }
 
 const Board: React.FC<BoardProps> = ({lists}) => {
+  const moveCard = (from: number, to: number) => {};
+
   return (
     <Container>
-      {lists.map((list) => (
+      {lists.map((list, index) => (
         <List
           title={list.title}
           creatable={list.creatable}
           cards={list.cards}
           done={list.done}
+          key={index}
         />
       ))}
     </Container>

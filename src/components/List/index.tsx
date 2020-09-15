@@ -41,10 +41,11 @@ const List: React.FC<ListProps> = ({title, creatable, cards, done}) => {
       </Header>
 
       <CardList>
-        {cards.map((card) => (
+        {cards.map((card, index) => (
           <Card
             id={card.id}
             key={card.id}
+            index={index}
             labels={card.labels}
             description={card.description}
             userAvatar={card.userAvatar}
