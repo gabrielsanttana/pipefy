@@ -1,4 +1,5 @@
-import React, {useRef} from 'react';
+import React, {useRef, useContext} from 'react';
+import BoardContext from '../Board/context';
 import {useDrag, useDrop} from 'react-dnd';
 import {Container, Header, Label} from './styles';
 
@@ -8,6 +9,7 @@ export interface CardProps {
   labels: string[];
   description: string;
   userAvatar?: string;
+  listIndex?: number;
 }
 
 const Card: React.FC<CardProps> = ({
@@ -16,8 +18,11 @@ const Card: React.FC<CardProps> = ({
   labels,
   description,
   userAvatar,
+  listIndex,
 }) => {
   const ref: any = useRef();
+
+  const {moveCard} = useContext<any>(BoardContext);
 
   const [{isDragging}, dragRef] = useDrag({
     item: {
@@ -53,6 +58,8 @@ const Card: React.FC<CardProps> = ({
       if (draggedIndex < targetIndex && draggedTop < targetCenter) {
         console.log(`card ${draggedIndex} depois do card ${targetIndex}`);
       }
+
+      moveCard(draggedIndex, targetIndex);
     },
   });
 

@@ -19,9 +19,10 @@ export interface ListProps {
   creatable: boolean;
   cards: CardProps[];
   done: boolean;
+  index?: number;
 }
 
-const List: React.FC<ListProps> = ({title, creatable, cards, done}) => {
+const List: React.FC<ListProps> = ({title, creatable, cards, done, index}) => {
   return (
     <Container done={done}>
       <Header>
@@ -46,6 +47,7 @@ const List: React.FC<ListProps> = ({title, creatable, cards, done}) => {
             id={card.id}
             key={card.id}
             index={index}
+            listIndex={index}
             labels={card.labels}
             description={card.description}
             userAvatar={card.userAvatar}
