@@ -7,31 +7,19 @@ export function loadLists() {
       cards: [
         {
           id: 1,
-          description: 'Bug ao mover um card para uma lista vazia',
-          labels: ['#7159c1'],
-          userAvatar: 'https://github.com/gabrielsanttana.png',
-        },
-        {
-          id: 2,
-          description: 'Bug ao mover um card na última posição de uma lista',
-          labels: ['#7159c1'],
-          userAvatar: 'https://github.com/gabrielsanttana.png',
-        },
-        {
-          id: 3,
           description: 'Estudar módulo 03 de React Native',
           labels: ['#7159c1'],
           userAvatar: 'https://github.com/gabrielsanttana.png',
         },
         {
-          id: 4,
+          id: 2,
           description:
             'Gravar Aula "NextJS: Utilizando server-side rendering com ReactJS"',
           labels: ['#54e1f7'],
           userAvatar: 'https://github.com/gabrielsanttana.png',
         },
         {
-          id: 5,
+          id: 3,
           description: 'Gravar testes e deploy ReactJS',
           labels: ['#54e1f7'],
           userAvatar: 'https://github.com/gabrielsanttana.png',
@@ -43,6 +31,18 @@ export function loadLists() {
       creatable: false,
       done: false,
       cards: [
+        {
+          id: 1,
+          description: 'Bug ao mover um card para uma lista vazia',
+          labels: ['#7159c1'],
+          userAvatar: 'https://github.com/gabrielsanttana.png',
+        },
+        {
+          id: 2,
+          description: 'Bug ao mover um card na última posição de uma lista',
+          labels: ['#7159c1'],
+          userAvatar: 'https://github.com/gabrielsanttana.png',
+        },
         {
           id: 6,
           description: 'Configurar pipeline de CI/CD',
