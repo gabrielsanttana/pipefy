@@ -7,14 +7,13 @@ export function loadLists() {
       cards: [
         {
           id: 1,
-          description: 'Estudar módulo 01 de NodeJS',
+          description: 'Bug ao mover um card para uma lista vazia',
           labels: ['#7159c1'],
           userAvatar: 'https://github.com/gabrielsanttana.png',
         },
         {
           id: 2,
-          description:
-            'Criar vídeo para o Youtube ensinando a recriar a interface do Pipefy',
+          description: 'Bug ao mover um card na última posição de uma lista',
           labels: ['#7159c1'],
           userAvatar: 'https://github.com/gabrielsanttana.png',
         },
@@ -46,7 +45,7 @@ export function loadLists() {
       cards: [
         {
           id: 6,
-          description: 'Recriando clone do Pipefy',
+          description: 'Configurar pipeline de CI/CD',
           labels: [],
           userAvatar: 'https://github.com/gabrielsanttana.png',
         },
@@ -59,7 +58,7 @@ export function loadLists() {
       cards: [
         {
           id: 7,
-          description: 'Gravar sobre Geolocalização e mapas com React Native',
+          description: 'Clonar a interface do Pipefy',
           labels: ['#7159c1'],
           userAvatar: 'https://github.com/gabrielsanttana.png',
         },
@@ -84,7 +83,7 @@ export function loadLists() {
       cards: [
         {
           id: 10,
-          description: 'Gravar aula sobre deploy e CI com React Native',
+          description: 'Configurar ambiente com Expo',
           labels: [],
           userAvatar: 'https://github.com/gabrielsanttana.png',
         },
@@ -96,8 +95,7 @@ export function loadLists() {
         },
         {
           id: 13,
-          description:
-            'Gravar Aula "Internacionalização de aplicações Node.js, ReactJS e React Native"',
+          description: 'Bug na tabela',
           labels: ['#7159c1'],
           userAvatar: 'https://github.com/gabrielsanttana.png',
         },
