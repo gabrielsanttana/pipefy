@@ -2,7 +2,7 @@
 
 ###
 
-<img src="./.github/mainpage.png" />
+<img src="./.github/mainpage2.png" />
 
 <p align="center">📑 A clone of Pipefy's project management interface with drag and drop </p>
 
