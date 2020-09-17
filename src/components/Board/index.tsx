@@ -10,10 +10,18 @@ const listsResponse = loadLists();
 const Board: React.FC = () => {
   const [lists, setLists] = useState<ListProps[]>(listsResponse);
 
-  const moveCard = (listIndex: number, from: number, to: number) => {
+  const moveCard = (
+    fromList: number,
+    toList: number,
+    from: number,
+    to: number,
+  ) => {
     setLists(
-      produce(lists, (draft) => {
-        const dragged = draft[1];
+      produce(lists, (draft: any) => {
+        const dragged = draft[fromList].cards[from];
+
+        draft[fromList].cards.splice(from, 1);
+        draft[toList].cards.splice(to, 0, dragged);
       }),
     );
   };

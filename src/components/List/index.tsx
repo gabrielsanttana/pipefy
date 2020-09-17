@@ -22,7 +22,13 @@ export interface ListProps {
   index?: number;
 }
 
-const List: React.FC<ListProps> = ({title, creatable, cards, done, index}) => {
+const List: React.FC<ListProps> = ({
+  title,
+  creatable,
+  cards,
+  done,
+  index: listIndex,
+}) => {
   return (
     <Container done={done}>
       <Header>
@@ -47,7 +53,7 @@ const List: React.FC<ListProps> = ({title, creatable, cards, done, index}) => {
             id={card.id}
             key={card.id}
             index={index}
-            listIndex={index}
+            listIndex={listIndex}
             labels={card.labels}
             description={card.description}
             userAvatar={card.userAvatar}

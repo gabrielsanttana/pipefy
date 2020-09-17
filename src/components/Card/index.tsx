@@ -29,6 +29,7 @@ const Card: React.FC<CardProps> = ({
       type: 'CARD',
       id,
       index,
+      listIndex,
     },
     collect: (monitor) => ({
       isDragging: monitor.isDragging(),
@@ -38,10 +39,16 @@ const Card: React.FC<CardProps> = ({
   const [, dropRef] = useDrop({
     accept: 'CARD',
     hover(item: any, monitor) {
-      const draggedIndex = item.index;
-      const targetIndex = index;
+      const draggedListIndex = item.listIndex;
+      const targetListIndex = listIndex;
 
-      if (draggedIndex === targetIndex) {
+      const draggedCardIndex = item.index;
+      const targetCardIndex = index;
+
+      if (
+        draggedCardIndex === targetCardIndex &&
+        draggedListIndex === targetListIndex
+      ) {
         return;
       }
 
@@ -51,15 +58,23 @@ const Card: React.FC<CardProps> = ({
       const draggedOffset = monitor.getClientOffset();
       const draggedTop = draggedOffset.y - targetSize.top;
 
-      if (draggedIndex < targetIndex && draggedTop < targetCenter) {
-        console.log(`card ${draggedIndex} antes do card ${targetIndex}`);
+      if (draggedCardIndex < targetCardIndex && draggedTop < targetCenter) {
+        return;
       }
 
-      if (draggedIndex < targetIndex && draggedTop < targetCenter) {
-        console.log(`card ${draggedIndex} depois do card ${targetIndex}`);
+      if (draggedCardIndex > targetCardIndex && draggedTop > targetCenter) {
+        return;
       }
 
-      moveCard(draggedIndex, targetIndex);
+      moveCard(
+        draggedListIndex,
+        targetListIndex,
+        draggedCardIndex,
+        targetCardIndex,
+      );
+
+      item.index = targetCardIndex;
+      item.listIndex = targetListIndex;
     },
   });
 
